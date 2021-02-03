@@ -1,10 +1,11 @@
-#include<stdio.h>
-int main (void)
-{
-/*a function that prints
- *desired script
+#include <stdio.h>
+/**
+ *main - takes no arguements
+ *@void-no arguments
+ *return: returns value 0
  */
-char Mystr []="\"Programming is like building a multilingual puzzle"
-	puts(Mystr);
-return(0);
+int main(void)
+{
+	puts("\"Programming is like building a multilingual puzzle")
+		return (0);
 }
