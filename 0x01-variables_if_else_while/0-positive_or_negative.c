@@ -16,12 +16,12 @@ int main(void)
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
 
-	if(n>0)
-		printf("%d\n",n "is positive");
-	elseIf(n<0)
-		printf("%d\n",n "is negative");
+	if (n > 0)
+		printf("%d is positive\n",n);
+	else if (n < 0)
+		printf("%d is negative/n",n);
 	else
-		print("%d\n",n "is zero");
+		print("%d is zero\n",n);
 
 
 	return (0);

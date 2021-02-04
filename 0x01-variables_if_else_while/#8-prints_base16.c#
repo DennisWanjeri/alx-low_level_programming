@@ -1,0 +1,12 @@
+#include <stdio.h>
+/**
+ *main - entry point
+ *
+ *Description:prints all numbers of base16 in lowercase
+ *
+ *Return: Always zero (success)
+ *
+ **/
+int main(void)
+{
+for
