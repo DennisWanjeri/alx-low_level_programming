@@ -6,11 +6,12 @@
  */
 int main(void)
 {
-	for (ch = 'a'; ch <= 'z' ;ch++)
+	int letter,n;
+	for (letter = 97, n = 1;n < 27;letter++,n++)
 	{
-		if (ch == 'q' || ch == 'e' ) 
+		if (letter == 101 || letter == 113 ) 
 			continue;
-		putchar(ch);
+		putchar(letter);
 	}
 		putchar(10);
 		return (0);

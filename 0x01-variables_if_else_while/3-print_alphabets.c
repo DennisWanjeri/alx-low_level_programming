@@ -8,13 +8,15 @@
  */
 int main()
 {
-	for (ch = 'A'; ch <= 'Z'; ch++;)
+	int Sletter,Cletter,n;
+
+	for (Sletter = 97, n = 1;n < 27;Sletter++, n++)
 	{
-		putchar(char);
-			}
-	for (ch = 'a';ch <= 'z';ch++;)
+		putchar(Sletter);
+	}
+	for (Cletter = 65, n = 1; n < 27;Cletter++, n++)
 	{
-		putchar(char);
+		putchar(Cletter);
 	}
 	putchar(10);
 	return (0);
