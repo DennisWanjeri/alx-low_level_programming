@@ -6,15 +6,15 @@
  *
  *Description: prints the alphabet in uppercase and lowercase
  */
-int main()
+int main(void)
 {
-	int Sletter,Cletter,n;
+	int Sletter, Cletter, n;
 
-	for (Sletter = 97, n = 1;n < 27;Sletter++, n++)
+	for (Sletter = 97, n = 1; n < 27; Sletter++, n++)
 	{
 		putchar(Sletter);
 	}
-	for (Cletter = 65, n = 1; n < 27;Cletter++, n++)
+	for (Cletter = 65, n = 1; n < 27; Cletter++, n++)
 	{
 		putchar(Cletter);
 	}

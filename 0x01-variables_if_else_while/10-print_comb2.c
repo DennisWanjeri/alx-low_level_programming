@@ -10,10 +10,10 @@ int main(void)
 {
 	int dig;
 
-	for (dig = 0;dig < 100;dig++)
+	for (dig = 0; dig < 100; dig++)
 	{
-		putchar((dig / 10)+ '0');
-		putchar((dig % 10)+ '0');
+		putchar((dig / 10) + '0');
+		putchar((dig % 10) + '0');
 		if (dig < 99)
 		{
 			putchar(44);

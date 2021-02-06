@@ -8,13 +8,13 @@
  */
 int main(void)
 {
-	int dig,letterhex, n;
+	int dig, letterhex, n;
 
-	for (dig = 48, n = 0; n < 10;dig++, n++)
+	for (dig = 48, n = 0; n < 10; dig++, n++)
 	{
 		putchar(dig);
 	}
-	for (letterhex = 97, n = 1;n < 7;letterhex++,n++)
+	for (letterhex = 97, n = 1; n < 7; letterhex++, n++)
 	{
 		putchar(letterhex);
 	}
