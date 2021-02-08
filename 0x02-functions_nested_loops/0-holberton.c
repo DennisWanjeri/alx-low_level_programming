@@ -8,10 +8,11 @@
  *Return: returns 0(successful)
  *
  */
-int main()
+int main(void)
 {
 	char holbText[9] = "Holberton";
 	int i;
+
 	for (i = 0; i < 9; i++)
 	{
 		_putchar(holbText[i]);
