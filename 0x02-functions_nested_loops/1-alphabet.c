@@ -1,6 +1,6 @@
 #include "holberton.h"
 /**
- *main - entry point
+ *print_alphabet - prints a-z
  *
  *Description: prints the alphabet in lowercase followed by a newline
  *
