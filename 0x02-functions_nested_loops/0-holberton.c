@@ -17,6 +17,6 @@ int main(void)
 	{
 		_putchar(holbText[i]);
 	}
-	putchar(10);
+	_putchar('\n');
 	return (0);
 }

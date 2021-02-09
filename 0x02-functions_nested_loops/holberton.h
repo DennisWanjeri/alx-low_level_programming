@@ -28,7 +28,7 @@ void print_alphabet()
 	{
 		_putchar(ch);
 	}
-	putchar(10);
+	_putchar('\n');
 }
 /**
  *print_alphabet_x10 - prints alphabet in lowercase 10 times
@@ -47,7 +47,7 @@ void print_alphabet_x10()
 			_putchar(ch);
 		}
 
-		putchar(10);
+		_putchar('\n');
 	}
        
 }
