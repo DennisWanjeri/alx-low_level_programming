@@ -8,16 +8,18 @@
  */
 int main(void)
 {
-	int i, t1 = 0, t2 = 1, nextTerm;
-	int n = 50;
+	long int i, t1 = 1, t2 = 2, sum = 0;
 
-	for (i = 1; i <= n; i++)
+	for (i = 1; i < 50; i++)
 	{
-		printf("%d, ", t1);
-		nextTerm = t1 + t2;
+		printf("%ld, ", t1);
+		sum = t1 + t2;
 		t1 = t2;
-		t2 = nextTerm;
+		t2 = sum;
+		if (i == 49)
+		{
+			printf("%ld\n", t1);
+		}
 	}
-	printf("\n");
 	return (0);
 }
