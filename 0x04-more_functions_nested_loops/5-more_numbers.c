@@ -4,7 +4,7 @@
  *
  *Description:0-14 x10
  *
- *Return:always zero
+ *Return:void
  *
  */
 void more_numbers(void)
