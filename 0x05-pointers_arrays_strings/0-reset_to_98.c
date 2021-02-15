@@ -4,7 +4,7 @@
  *
  *Return:void
  *
- *@*n:input
+ *@n:input
  *
  */
 void reset_to_98(int *n)
