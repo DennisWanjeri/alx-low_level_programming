@@ -1,3 +1,4 @@
+#include "holberton.h"
 /**
  *print_rev - prints a string in reverse
  *
@@ -8,23 +9,17 @@
  */
 void print_rev(char *s)
 {
-	int length, i;
-	char *begin_ptr, *end_ptr, ch;
+	int i = 0;
 
-	length = _strlen(s);
-	begin_ptr = s;
-	end_ptr = s;
-
-	for (i = 0; i < length - 1; i++)
-		end_ptr++;
-
-	for (i = 0; i < length / 2; i++)
+	while (s[i] != '\0')
 	{
-
-		ch = *end_ptr;
-		*end_ptr = *begin_ptr;
-		*begin_ptr = ch;
-		begin_ptr++;
-		end_ptr--;
+		i++;
 	}
+	i--;
+	while (i >= 0)
+	{
+		_putchar(s[i]);
+		i--;
+	}
+	_putchar('\n');
 }
