@@ -11,17 +11,23 @@
  */
 void print_array(int *a, int n)
 {
-	int i;
+	int i, count;
 
-	for (i = 0; i <= n; i++)
+	i = 0;
+	count = 1;
+
+	if (n < 0)
 	{
-		if (i == n)
+		n = 0;
+	}
+	else if (n > 0)
+	{
+		while (a[i] != '\0' && count < n)
 		{
-			printf("%d\n", a[i]);
+			printf("%d, ", a[i]);
+			i++;
+			count++;
 		}
-		else
-		{
-		printf("%d, ", a[i]);
-		}
+		printf("%d\n", a[i]);
 	}
 }
