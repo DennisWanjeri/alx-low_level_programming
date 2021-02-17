@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <math.h>
 #include <time.h>
 /**
  *main - generates random passwords
@@ -10,17 +9,18 @@
  */
 int main(void)
 {
-	srand((unsigned int)(time(NULL)));
-	int i;
-	char pass[12];
+	int i = 0;
+	int random, num;
 
-	for (i = 0; i < 4; i++) {
-		pass[i] = rand() % 9;
-		char capLetter = 'A' + (rand() % 26);
-		pass[i + 2] = capLetter;
-		char letter = 'a' + (rand() % 26);
-		pass[i + 3] = letter;
-		printf("%d%c%c", pass[i], pass[i + 2], pass[i + 3]);
+	srand(time(NULL));
+	num = 2772;
+	while (num > 122)
+	{
+		random = (rand() % 100);
+		printf("%c", random);
+		num = random;
+		i++;
 	}
-	printf("\n");
+	printf("%c", random);
+	return (0);
 }
