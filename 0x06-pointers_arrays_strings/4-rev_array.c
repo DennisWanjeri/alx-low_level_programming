@@ -10,22 +10,16 @@
  */
 void reverse_array(int *a, int n)
 {
-	int i, max, half;
-	int first, last;
+	int i, j, temp;
 
+	j = n - 1;
 	i = 0;
-	while (a[i] != '\0')
+	while (i < j)
 	{
+		temp = a[i];
+		a[i] = a[j];
+		a[j] = temp;
 		i++;
-	}
-	max = i - 1;
-	half = max / 2;
-	while (half >= 0)
-	{
-		first = a[max - half];
-		last = a[half];
-		a[half] = first;
-		a[max - half] = last;
-		half--;
+		j--;
 	}
 }
