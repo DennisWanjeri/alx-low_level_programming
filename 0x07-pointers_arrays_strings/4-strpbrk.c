@@ -1,6 +1,6 @@
 #include "holberton.h"
 /**
- *_strprbk - locates the first occurrence of string s in string
+ *_strpbrk - locates the first occurrence of string s in string
  *accept
  *
  *@s:string scanned
