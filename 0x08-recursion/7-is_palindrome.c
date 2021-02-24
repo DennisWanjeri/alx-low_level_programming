@@ -26,13 +26,13 @@ int _strlen_p(char *s)
  */
 int _test(char *s, int l)
 {
-	if (l == 0)
+	if (l < 1)
 	{
 		return (1);
 	}
 	if (*s == *(s + l))
 	{
-		return (_test(s + 1, l - 1));
+		return (_test(s + 1, l - 2));
 	}
 	return (0);
 }
@@ -47,5 +47,6 @@ int _test(char *s, int l)
 int is_palindrome(char *s)
 {
 	int length = _strlen_p(s);
+
 	return (_test(s, length - 1));
 }
