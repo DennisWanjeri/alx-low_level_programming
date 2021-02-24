@@ -2,8 +2,8 @@
 /**
  *_prime - returns 1 if no. is prime
  *
- *@n: input
- *@i:input
+ *@f: input
+ *@p:input
  *Return:1 - prime ,0- otherwise
  *
  */
