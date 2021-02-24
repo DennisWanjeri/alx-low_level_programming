@@ -7,19 +7,19 @@
  *Return:1 - prime ,0- otherwise
  *
  */
-int _prime(int n, int i)
+int _prime(int f, int p)
 {
-	if (n % i == 0)
+	if (p < 2 || p % f == 0)
 	{
 		return (0);
 	}
-	if (n / 2 > i)
+	else if (f > p / 2)
 	{
-		return (_prime(n, i + 2));
+		return (1);
 	}
 	else
 	{
-		return (1);
+		return (_prime(f + 1, p));
 	}
 }
 /**
@@ -31,12 +31,9 @@ int _prime(int n, int i)
  */
 int is_prime_number(int n)
 {
-	if ((!(n % 2) && n != 2 || n < 2))
+	if (n == 2)
 	{
-		return (0);
+		return (1);
 	}
-	else
-	{
-		return (_prime(n, 3));
-	}
+	return (_prime(2, n));
 }
