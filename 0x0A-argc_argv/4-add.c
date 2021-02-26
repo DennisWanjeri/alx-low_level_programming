@@ -1,15 +1,12 @@
 #include "holberton.h"
 /**
- *main - prints name of the program
+ *main - adds positive numbers
  *
  *@argc:arguement count
- *@argv:arguement variable
+ *@argv:arguement vector
  *
  *Return:0(success)
  *
  */
 int main(int argc, char *argv[])
 {
-	_putchar(argv[0]);
-	return (0);
-}
