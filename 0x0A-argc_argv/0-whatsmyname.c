@@ -1,0 +1,14 @@
+#include "holberton.h"
+/**
+ *main - prints name of the program
+ *
+ *@argc:arguement count
+ *@argv:arguement variable
+ *
+ *Return:0(success)
+ *
+ */
+int main(int argc, char *argv[])
+{
+	_putchar(argv[0]);
+}
