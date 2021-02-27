@@ -1,4 +1,5 @@
 #include "holberton.h"
+#include <stdio.h>
 /**
  *main - prints the no. of arguements passed to it
  *
@@ -9,6 +10,6 @@
  */
 int main(int argc, char *argv[])
 {
-	_putchar(argc);
+	printf("%d\n", argc);
 	return (0);
 }

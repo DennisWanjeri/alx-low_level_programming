@@ -1,4 +1,5 @@
 #include "holberton.h"
+#include <stdio.h>
 /**
  *main - multiplies two numbers
  *
@@ -8,19 +9,19 @@
  */
 int main(int argc, char *argv[])
 {
-	int sum = 0;
-
+	int product = 0;
+	int x, y;
 	if (argc == 3)
 	{
-		sum += argv[1] * argv[2];
-		_putchar(sum + '0');
-		_putchar('\n');
+		x = atoi(argv[1]);
+		y = atoi(argv[2]);
+		product = x * y;
+		printf("%d\n", product);
 		return (0);
 	}
 	else
 	{
-	_putchar('Error');
-	_putchar('\n');
-	return (1);
+		printf("Error\n");
+		return (1);
 	}
 }
