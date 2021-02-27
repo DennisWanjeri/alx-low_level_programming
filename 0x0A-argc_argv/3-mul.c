@@ -1,4 +1,4 @@
-#include "holberton.h"
+#include <stdlib.h>
 #include <stdio.h>
 /**
  *main - multiplies two numbers
@@ -11,6 +11,7 @@ int main(int argc, char *argv[])
 {
 	int product = 0;
 	int x, y;
+
 	if (argc == 3)
 	{
 		x = atoi(argv[1]);
