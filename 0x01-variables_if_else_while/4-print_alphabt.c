@@ -13,8 +13,8 @@ int main(void)
 
 	for (letter = 97, n = 1; n < 27; letter++, n++)
 	{
-		if (letter == 101 || letter == 113) 
-	        continue;
+		if (letter == 101 || letter == 113)
+			continue;
 		putchar(letter);
 	}
 		putchar(10);
