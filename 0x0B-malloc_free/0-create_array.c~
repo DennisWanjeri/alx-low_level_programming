@@ -1,0 +1,10 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include "holberton.h"
+/**
+ *create_array - creates array of chars initializes it to a specific char
+ *@size:intended size
+ *@c:character
+ *
+ *Return:Null,pointer to array
+ */
