@@ -58,7 +58,7 @@ char **strtow(char *str)
 
 	char **p;
 
-	if (str == NULL || str == "")
+	if (str == NULL || str[0] == '\0')
 	{
 		return (NULL);
 	}
