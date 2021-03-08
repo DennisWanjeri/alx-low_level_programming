@@ -2,17 +2,6 @@
 #include <stdlib.h>
 #include <stdio.h>
 /**
- *_strlen - finds length of a string
- *@str:string to find length
- *Return:length of string
- */
-int _strlen(char *str)
-{
-	for (i = 0; i != '\0'; i++)
-		;
-	return (i);
-}
-/**
  *new_dog - creates a new dog of type dog_t
  *@name:name
  *@age:age
@@ -21,27 +10,42 @@ int _strlen(char *str)
  */
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	char *strname, *strowner;
-	int lenname, ownlen;
-	int i = 0;
+	int i, j, z;
+	dog_t *newd;
 
-	lenname = _strlen(name);
-	ownlen = _strlen(owner);
-	strname = malloc((sizeof(char) * lenname) + 1);
-	if (!strname)
+	for (i = 0; name[i] != '\0'; i++)
+		;
+	for (j = 0; owner[j] != '\0'; j++)
+		;
+	newd = malloc(sizeof(dog_t));
+	if (newd == NULL)
 	{
+		free(newd);
 		return (NULL);
 	}
-	strowner =malloc((sizeof(char) * ownlen) + 1);
-	if (!strowner)
+	newd->name =malloc(i * sizeof(newd->name));
+	if (newd->name == NULL)
 	{
+		free(newd->name);
+		free(newd);
 		return (NULL);
 	}
-	for (i = 0; i < lenname; i++)
+	for (z = 0; z <= i; z++)
 	{
-		strname[i] = name[i];
+		(*newd).name[z] = name[z];
 	}
-	for (i = 0; i < ownlen; i++)
-		strowner[i] = owner[i];
-
+	(*newd).age = age;
+	newd->owner = malloc(j * sizeof(newd->owner));
+	if (newd->owner == NULL)
+	{
+		free(newd->name);
+		free(newd->owner);
+		free(newd);
+		return (NULL);
+	}
+	for (z = 0; z <= j; z++)
+	{
+		newd->owner[z] = owner[z];
+	}
+	return (newd);
 }
