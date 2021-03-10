@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 /**
  *print_name - calls another function to peint a name
  *
@@ -9,9 +10,9 @@
  */
 void print_name(char *name, void (*f)(char *))
 {
-	if (f)
+	if (f == NULL)
 	{
-		(*f)(name);
+		return;
 	}
-	return;
+	(*f)(name);
 }
