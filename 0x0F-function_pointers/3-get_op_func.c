@@ -1,3 +1,5 @@
+#include <string.h>
+#include "3-calc.h"
 /**
  *get_op_func - selects right function to perform tasks selected by user
  *@s:operator passed as arguement to program
@@ -13,5 +15,15 @@ int (*get_op_func(char *s))(int, int)
 		{"%", op_mod},
 		{NULL, NULL}
 	};
-	int i;
+	int i = 0;
+
+	while (s && ops[i].op != NULL)
+	{
+		if (!strcmp(ops[i].op, s))
+		{
+			return (ops[i].f);
+		}
+		i++;
+	}
+	return (NULL);
 }
