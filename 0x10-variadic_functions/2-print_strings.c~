@@ -1,0 +1,32 @@
+#include <stdio.h>
+#include <stdarg.h>
+#include <stdlib.h>
+/**
+ *print_strings - prints strings passed to it
+ *@separator:sep. two strings
+ *@n:elements
+ *
+ *Return:void
+ */
+void print_strings(const char *separator, const unsigned int n, ...)
+{
+	unsigned int i;
+	va_list va;
+
+	if (separator == NULL)
+		separator = "";
+
+	va_start(va, n);
+
+	for (i = 0; i <= (n - 1); i++)
+	{
+		if (va_arg(va, char *) == NULL)
+			va_arg(va, char *) = "(nil)";
+		if (i != (n - 1))
+		{
+			printf("%s%s", va_arg(va, char *), separator);
+		}
+		printf("%s\n", va_arg(va, char *));
+	}
+	va_end(va);
+}
