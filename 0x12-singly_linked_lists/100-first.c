@@ -1,5 +1,5 @@
 #include <stdio.h>
-void startupfun (void) __attribute__ ((constructor));
+void startupfun(void) __attribute__ ((constructor));
 /**
  *startupfun - prints a string before calling main
  *Return:void
