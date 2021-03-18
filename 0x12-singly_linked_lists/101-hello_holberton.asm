@@ -10,4 +10,4 @@ main:	push		rbx
 		ret
 		section	.data
 message:	db
-"Hello, Holberton", 10, 0
+"Hello, Holberton\n", 10, 0
