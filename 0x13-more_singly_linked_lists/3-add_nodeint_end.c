@@ -6,6 +6,7 @@
  *add_nodeint_end - adds a nodeint at the end
  *@head:pointer to head
  *@n:int to add in new node
+ *Return:pointer to new node
  */
 listint_t *add_nodeint_end(listint_t **head, const int n)
 {
