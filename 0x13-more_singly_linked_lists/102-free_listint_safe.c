@@ -17,11 +17,11 @@ size_t free_listint_safe(listint_t **head)
 	}
 	for (i = 0; *head; i++)
 	{
-		p_dif = (*head - *head->next);
+		p_dif = (*head - (*head)->next);
 		if (p_dif > 0)
 		{
 			temp = *head;
-			*head = *head->next;
+			*head = (*head)->next;
 			free (temp);
 		}
 		else
