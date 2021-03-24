@@ -7,7 +7,7 @@
  *@tortoise:slower pointer
  *Return:address to common node,NULL otherwise
  */
-listint_t *find_common_node(listint *hare, listint *tortoise)
+listint_t *find_common_node(listint_t *hare, listint_t *tortoise)
 {
 	while (hare && tortoise && hare->next)
 	{
@@ -26,7 +26,7 @@ listint_t *find_common_node(listint *hare, listint *tortoise)
  */
 listint_t *find_listint_loop(listint_t *head)
 {
-	listint_t *hare, *tortoise;
+	listint_t *hare = head, *tortoise = head;
 
 	tortoise = find_common_node(hare, tortoise);
 	if (tortoise == NULL)
