@@ -6,31 +6,34 @@
  *@h:pointer to listint
  *Return:size of list free'd
  */
-size_t free_listint_safe(listint_t **head)
+size_t free_listint_safe(listint_t **h)
 {
-	int p_dif, i;
+	int p_diff;
+	size_t i = 0;
 	listint_t *temp;
 
-	if (head == NULL || *head == NULL)
+	if (h == NULL || *h == NULL)
 	{
 		return (0);
 	}
-	for (i = 0; *head; i++)
+	while (*h)
 	{
-		p_dif = *head - (*head)->next;
-		if (p_dif > 0)
+		p_diff = *h - (*h)->next;
+		if (p_diff > 0)
 		{
-			temp = *head;
-			*head = (*head)->next;
-			free (temp);
+			temp = (*h)->next;
+			free(*h);
+			*h = temp;
+			i++;
 		}
 		else
 		{
-			free(*head);
+			free(*h);
+			*h = NULL;
 			i++;
 			break;
 		}
 	}
-	*head = NULL;
+	*h = NULL;
 	return (i);
 }
