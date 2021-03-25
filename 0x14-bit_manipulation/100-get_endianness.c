@@ -1,3 +1,4 @@
+#include "holberton.h"
 /**
  *get_endianess - checks endianess
  *Return:0- big endian, 1- small endian
