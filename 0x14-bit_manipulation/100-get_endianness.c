@@ -1,6 +1,6 @@
 #include "holberton.h"
 /**
- *get_endianess - checks endianess
+ *get_endianness - checks endianess
  *Return:0- big endian, 1- small endian
  */
 int get_endianness(void)
