@@ -8,18 +8,12 @@
  */
 void print_binary(unsigned long int n)
 {
-	unsigned int mask = 1024;
+	unsigned int mask = 1;
 
-	while (mask > 0)
-	{
-		if ((n & mask) == 0)
-		{
-			printf("0");
-		}
-		else
-		{
-			printf("1");
-		}
-		mask = mask >> 1;
-	}
+	if (n > 1)
+		print_binary(n >> 1);
+	if ((n & mask) == 1)
+		_putchar('1');
+	else
+		_putchar('0');
 }

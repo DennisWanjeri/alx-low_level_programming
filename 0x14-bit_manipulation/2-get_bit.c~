@@ -1,0 +1,11 @@
+#include "holberton.h"
+#include <stdlib.h>
+#include <stdio.h>
+/**
+ *get_bit - gets a bit at a certain index
+ *@n:no. to find bit
+ *@index:index to get bit
+ *Return:the bit,otherwise (-1)
+ */
+int get_bit(unsigned long int n, unsigned int index)
+{
