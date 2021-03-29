@@ -18,12 +18,13 @@ int main(int argc,char *argv[])
 		exit(97);
 	}
 	fd_from = open(argv[1], O_RDONLY);
-	cont1 = read(fd_from, buff, 1024);
 	if (fd_from == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
+		dprintf(STDERR_FILENO, "Error: Can't read from file \
+%s\n", argv[1]);
 		exit(98);
 	}
+	cont1 = read(fd_from, buff, 1024);
 	if (cont1 == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't read from file  %s\n", argv[1]);
