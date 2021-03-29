@@ -9,10 +9,9 @@
 int main(int argc, char *argv[])
 {
 	int fd_from, fd_to;
-	ssize_t read_l = 1024, write_l;
+	ssize_t read_l = 1024, write_l, l_close;
 	char buff[1024];
 
-/*check for incorrect no. of arguements*/
 	if (argc != 3)
 	{dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
 		exit(97);
@@ -22,7 +21,7 @@ int main(int argc, char *argv[])
 	{dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
 		exit(98);
 	}
-	fd_to = open(argv[2], O_CREAT | O_TRUNC | O_WRONLY, 0664);
+	fd_to = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
 	if (fd_to == -1)
 	{dprintf(STDERR_FILENO, "Error: can't write to %s\n", argv[2]);
 		exit(99);
@@ -38,11 +37,13 @@ int main(int argc, char *argv[])
 		{dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
 			exit(99); }
 	}
-	if (close(fd_from) == -1)
+	l_close = close(fd_from);
+	if (l_close == -1)
 	{dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd_from);
 		exit(100);
 	}
-	if (close(fd_to) == -1)
+	l_close = close(fd_to);
+	if (l_close == -1)
 	{dprintf(STDERR_FILENO, "Error: Cant't close fd %d\n", fd_to);
 		exit(100);
 	}
