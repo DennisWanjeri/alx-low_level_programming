@@ -184,7 +184,7 @@ void print_osabi(unsigned char *e_ident)
 /**
  *print_type - prints an elfs type
  *@e_type:status int
- *@e_endian:pointer to string
+ *@e_ident:pointer to string
  */
 void print_type(unsigned int e_type, unsigned char *e_ident)
 {
