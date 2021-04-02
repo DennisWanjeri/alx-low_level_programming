@@ -57,7 +57,7 @@ void elf_validation(unsigned char *e_ident)
 {
 	if (e_ident[0] == 0x7f && e_ident[1] == 'E' && e_ident[2] == 'L' && e_ident[3] == 'F')
 	{
-		printf("ELF header:\n");
+		printf("ELF Header:\n");
 	}
 	else
 	{
@@ -73,7 +73,7 @@ void print_magic(unsigned char *e_ident)
 {
 	int i;
 
-	printf("  Magic:  ");
+	printf("  Magic:   ");
 	i = 0;
 	while (i < EI_NIDENT - 1)
 	{
