@@ -11,61 +11,39 @@
 dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
 	unsigned int i = 0;
+	dlistint_t *current_node = *h;
 	dlistint_t *new_node = NULL;
-	size_t size = 0;
+	dlistint_t *prev_node = NULL;
 
-	if (!h)
+	if (h == NULL || (*h == NULL && idx != 0))
 		return (NULL);
-	if (*h == NULL || idx == 0)
-	{
-		new_node = add_dnodeint(*&h, n);
-		return (new_node);
-	}
-	size = dlistint_len(*h);
-	if (size < idx)
+	if (idx == 0)
+		return (add_dnodeint(h, n));
+	new_node = malloc(sizeof(dlistint_t));
+	if (!new_node)
 		return (NULL);
-	if (size == idx)
-	{
-		new_node = add_dnodeint_end(*&h, n);
-		return (*h);
-	}
-	while ((*h)->prev)
-		*h = (*h)->prev;
-	while (i <= idx)
+	new_node->n = n;
+	new_node->next = NULL;
+	new_node->prev = NULL;
+	while (current_node != NULL)
 	{
 		if (i == idx)
 		{
-			new_node = malloc(sizeof(dlistint_t));
-			new_node->n = n;
-			new_node->next = *h;
-			new_node->prev = (*h)->prev;
-			if ((*h)->prev != NULL)
-				(*h)->prev->next = new_node;
-			(*h)->prev = new_node;
-			while ((*h)->prev)
-				*h = (*h)->prev;
-			return (*h);
+			new_node->next = current_node;
+			new_node->prev = current_node->prev;
+			prev_node = current_node->prev;
+			prev_node->next = new_node;
+			return (new_node);
 		}
-		*h = (*h)->next, i++;
+		current_node = current_node->next;
+		i++;
 	}
-	new_node = add_dnodeint_end(*&h, n);
-	return (*h);
-}
-/**
-*dlistint_len - returns the length of a double linked list
-*@h:list to find length
-*Return:size of node
-*/
-size_t dlistint_len(const dlistint_t *h)
-{
-	size_t n = 0;
-
-	if (h == NULL)
-		return (n);
-	while (h)
+	/*end*/
+	if (i == idx)
 	{
-		n++;
-		h = h->next;
+		add_dnodeint_end(h, n);
+		return (new_node);
 	}
-	return (n);
+	free(new_node);
+	return (NULL);
 }
